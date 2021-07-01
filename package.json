@@ -9,7 +9,7 @@
     "watch": "tsc -w",
     "pretest": "install",
     "test": "jest",
-    "lint": "eslint src/**",
+    "lint": "eslint --fix src/**",
     "cdk": "cdk"
   },
   "devDependencies": {
@@ -29,6 +29,7 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.110.1",
     "@aws-cdk/core": "1.110.1",
     "source-map-support": "^0.5.16"
   }
