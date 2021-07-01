@@ -2,19 +2,21 @@
   "name": "technical-test",
   "version": "0.1.0",
   "bin": {
-    "technical-test": "bin/technical-test.js"
+    "technical-test": "src/bin/technical-test.js"
   },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "pretest": "npm install",
+    "pretest": "install",
     "test": "jest",
+    "lint": "eslint src/**",
     "cdk": "cdk"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.110.1",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
+    "@types/source-map-support": "^0.5.3",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",
     "aws-cdk": "1.110.1",
