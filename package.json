@@ -9,11 +9,13 @@
     "watch": "tsc -w",
     "pretest": "install",
     "test": "jest",
-    "lint": "eslint src/**",
+    "lint": "eslint src/** test/**",
+    "lint-fix": "eslint --fix src/** test/**",
     "cdk": "cdk"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.110.1",
+    "@types/aws-lambda": "^8.10.77",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "@types/source-map-support": "^0.5.3",
@@ -29,7 +31,10 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.110.1",
+    "@aws-cdk/aws-lambda-nodejs": "^1.110.1",
     "@aws-cdk/core": "1.110.1",
+    "aws-lambda": "^1.0.6",
     "source-map-support": "^0.5.16"
   }
 }
