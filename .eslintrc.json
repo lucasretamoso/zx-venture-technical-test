@@ -16,7 +16,8 @@
     ],
     "rules": {
         "no-new": "off",
-        "import/extensions": "never",
-        "import/no-unresolved": "never"
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
+        "quotes": "error"
     }
 }

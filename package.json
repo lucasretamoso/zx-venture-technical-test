@@ -9,7 +9,8 @@
     "watch": "tsc -w",
     "pretest": "install",
     "test": "jest",
-    "lint": "eslint --fix src/**",
+    "lint": "eslint src/** test/**",
+    "lint-fix": "eslint --fix src/** test/**",
     "cdk": "cdk"
   },
   "devDependencies": {
