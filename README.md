@@ -14,6 +14,16 @@ We would love to be able to recommend our customers what is the best combination
 
 How do we do it? We ask our customers what's the exact level of bitterness they are looking for and we will suggest them two different beers that together sum up to that number.
 
+## Structure
+
+The project has 3 part, the stack definition, the CDK project definition and the Lambdas code.
+
+- The stack definition is hosted on src/lib and define all the Stack which will deploy on CloudFormation. These have all the AWS architecture.
+
+- CDK project is a file which get all the stack in the same file. It is the main file needing to deploy using CDK. It is hosted on src/bin
+
+- The Lambda code are hosted on src/handler. If is necessary, each Lambda will have a Service code.
+
 ## Pre-requirements
 
 1. [AWS Command Line Interface](https://aws.amazon.com/cli/): This tool helps us to configure the AWS account and provides us the credential to deploy the solution.
@@ -22,8 +32,13 @@ How do we do it? We ask our customers what's the exact level of bitterness they 
 3. [NodeJS](https://nodejs.org/en/)
 4. [Typescript](https://www.typescriptlang.org/)
 
+## Testing
 
-## Test the project
+I planned to create a test for CDK and the Lambda services. Is a good practice that the lambda handler doesn't have a lot of code or complex code, so is not necessary to check it with a test.
+
+The tests are hosted in the `test` folder.
+
+### Run the test
 
 To test the project you need to run the following command:
 ``` bash
